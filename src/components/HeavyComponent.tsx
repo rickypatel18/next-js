@@ -1,29 +1,9 @@
-"use client";
-
-import dynamic from "next/dynamic";
-import { useState } from "react";
-
-// Lazy load HeavyComponent (only loads when clicked)
-const HeavyComponent = dynamic(() => import("../components/HeavyComponent"), {
-  loading: () => <p>Loading...</p>,
-  ssr: false,
-});
-
-export default function Home() {
-  const [showComponent, setShowComponent] = useState(false);
-
-  return (
-    <div>
-      <h1>Home Page</h1>
-
-      <button
-        onClick={() => setShowComponent(true)}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-      >
-        Load Component
-      </button>
-
-      {showComponent && <HeavyComponent />}
-    </div>
-  );
-}
+export default function HeavyComponent() {
+    return (
+      <div className="p-4 bg-gray-600 rounded mt-4">
+        <h2 className="text-xl font-bold">Heavy Component Loaded!</h2>
+        <p>This component was loaded dynamically.</p>
+      </div>
+    );
+  }
+  
