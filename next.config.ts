@@ -19,3 +19,10 @@ export default nextConfig;
 
 
 // for any image from anywhere but https
+
+// webpack: (config, { isServer }) => {
+//   if (!isServer) {
+//     config.resolve.fallback = { fs: false };
+//   }
+//   return config;
+// },
