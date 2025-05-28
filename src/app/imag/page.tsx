@@ -34,7 +34,7 @@ export default function ImagePage() {
           alt="Random Nature"
           width={500}
           height={300}        
-          className="rounded-lg"
+          className="rounded-lg h-auto w-auto"
         />
       </div>
 

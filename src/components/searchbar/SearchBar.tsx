@@ -11,7 +11,7 @@ export default function SearchBar() {
     e.preventDefault();
     if (query.trim()) {
       router.push(`/search?query=${encodeURIComponent(query)}`);
-      // setQuery("");
+      setQuery("");
     }
   }
 
@@ -24,7 +24,6 @@ export default function SearchBar() {
         placeholder="Search products..."
         className="border p-2 rounded"
         aria-label="Search products"
-        // autoFocus
       />
       <button
         type="submit"

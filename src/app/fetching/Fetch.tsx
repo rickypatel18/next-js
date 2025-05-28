@@ -26,7 +26,7 @@ const Fetch = ({ initialData }: { initialData: Post[] }) => {
 
   return (
     <div>
-      <h1>Hybrid Data Fetching</h1>
+      <h1 className="bg-blue-500">Hybrid Data Fetching</h1>
       {loading && <p>Updating...</p>}
       <ul>
         {data.map((post) => (

@@ -8,10 +8,10 @@ export default function DashboardLayout({
       {/* Sidebar */}
       <aside className="w-64 bg-gray-900 text-white p-4">
         <nav>
-          <a href="/dashboard" className="block py-2">
+          <a href="/dashboard2" className="block py-2">
             Home
           </a>
-          <a href="/dashboard/settings" className="block py-2">
+          <a href="/dashboard2/settings" className="block py-2">
             Settings
           </a>
         </nav>

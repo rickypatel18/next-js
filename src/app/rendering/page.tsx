@@ -65,7 +65,7 @@ interface Post {
   
     return (
       <div>
-        <h1>Static Data (ISR Enabled)</h1>
+        <h1 className="bg-blue-500">Static Data (ISR Enabled)</h1>
         <ul>
           {data.map((d) => (
             <li key={d.id}>{d.title}</li>

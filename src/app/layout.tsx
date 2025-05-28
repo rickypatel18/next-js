@@ -1,9 +1,8 @@
-import { Inter } from "next/font/google";
+
 import Footer from "@/components/footer/Footer";
 import "./globals.css";
 import Navbar from "@/components/header/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "My Next.js App",
@@ -17,11 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="main-layout-division flex flex-col min-h-screen ">
+      <body >
+        <div className="main-layout-division flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-grow p-4 ">{children}</main>{" "}
-          {/* Add flex-grow */}
+          <main className="flex-grow p-4">{children}</main>
           <Footer />
         </div>
       </body>

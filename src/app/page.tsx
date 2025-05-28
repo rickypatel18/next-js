@@ -5,8 +5,8 @@ import { useState } from "react";
 
 // Lazy load the HeavyComponent (loads only when needed)
 const HeavyComponent = dynamic(() => import("../components/HeavyComponent"), {
-  loading: () => <p>Loading...</p>, // Show loading text until component loads
-  ssr: false, // Disables SSR (renders only on the client)
+  loading: () => <p>Loading...</p>,
+  ssr: false,
 });
 
 export default function HomePage() {
@@ -18,10 +18,12 @@ export default function HomePage() {
       <p>This is the home page.</p>
       <Button />
       <button
-        onClick={() => setShowComponent(true)}
+        onClick={() => setShowComponent(!showComponent)}
         className="bg-blue-500 text-white px-4 py-2 w-fit rounded"
       >
-        Load Component
+        {
+          showComponent ? "Hide Heavy Component" : "Show Heavy Component"
+        }
       </button>
 
       {showComponent && <HeavyComponent />}
